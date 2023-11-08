@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Kasir</title>
+</head>
+<body>
+    <h1>Kalkulator Kasir</h1>
+
+    <p>Masukkan harga barang: <input type="number" id="hargaBarang"></p>
+    <p>Masukkan jumlah uang yang dibayarkan: <input type="number" id="jumlahUang"></p>
+    <button onclick="hitungKembalian()">Hitung Kembalian</button>
+
+    <p id="hasilKembalian"></p>
+
+    <script>
+        function hitungKembalian() {
+            var hargaBarang = parseFloat(document.getElementById("hargaBarang").value);
+            var jumlahUang = parseFloat(document.getElementById("jumlahUang").value);
+
+            if (isNaN(hargaBarang) || isNaN(jumlahUang)) {
+                document.getElementById("hasilKembalian").innerHTML = "Masukkan harga dan jumlah uang yang valid.";
+            } else if (hargaBarang > jumlahUang) {
+                document.getElementById("hasilKembalian").innerHTML = "Uang yang dibayarkan kurang dari harga barang.";
+            } else {
+                var kembalian = jumlahUang - hargaBarang;
+                document.getElementById("hasilKembalian").innerHTML = "Kembalian yang harus diberikan: Rp " + kembalian;
+            }
+        }
+    </script>
+</body>
+</html>

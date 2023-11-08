@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Keliling Trapesium</title>
+    <script>
+        function hitungKeliling() {
+            var a = parseFloat(document.getElementById('sisi_a').value);
+            var b = parseFloat(document.getElementById('sisi_b').value);
+            var c = parseFloat(document.getElementById('sisi_c').value);
+            var d = parseFloat(document.getElementById('sisi_d').value);
+
+            var keliling = a + b + c + d;
+
+            if (!isNaN(keliling)) {
+                document.getElementById('hasil').innerHTML = 'Keliling Trapesium: ' + keliling;
+            } else {
+                document.getElementById('hasil').innerHTML = 'Masukkan nilai yang valid untuk semua sisi.';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Kalkulator Keliling Trapesium</h1>
+    <form>
+        Sisi a: <input type="text" id="sisi_a"><br>
+        Sisi b: <input type="text" id="sisi_b"><br>
+        Sisi c: <input type="text" id="sisi_c"><br>
+        Sisi d: <input type="text" id="sisi_d"><br>
+        <input type="button" value="Hitung Keliling" onclick="hitungKeliling()">
+    </form>
+    <p id="hasil"></p>
+</body>
+</html>

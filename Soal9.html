@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perulangan</title>
+</head>
+<body>
+    <h1>Perulangan</h1>
+
+    <p id="output"></p>
+
+    <script>
+        var outputElement = document.getElementById("output");
+        outputElement.innerHTML = ""; // Mengosongkan elemen output
+
+        for (var i = 10; i >= 1; i--) {
+            if (i === 1) {
+                outputElement.innerHTML += "Anak ayam turun " + i + ", mati satu tinggal ayam";
+            } else {
+                outputElement.innerHTML += "Anak ayam turun " + i + ", mati satu tinggal " + (i - 1) + "<br>";
+            }
+        }
+    </script>
+</body>
+</html>

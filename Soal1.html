@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ubah Warna Persegi</title>
+    <script>
+        function ubahWarna() {
+            var persegi = document.getElementById("persegi");
+            if (persegi.style.backgroundColor === "red") {
+                persegi.style.backgroundColor = "blue";
+            } else {
+                persegi.style.backgroundColor = "red";
+            }
+        }
+    </script>
+    <style>
+        #persegi {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="persegi"></div>
+    <button onclick="ubahWarna()">Ubah Warna</button>
+</body>
+</html>

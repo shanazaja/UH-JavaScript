@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cek Kelayakan Menonton Bioskop</title>
+</head>
+<body>
+     <h1>Cek Kelayakan Menonton Bioskop</h1>
+     <h2>Kategori Usia</h2>
+        <p>Balita = Usia kurang dari 13th</p>
+        <p>Remaja = +13</p>
+    <p>Masukkan kategori usia: <input type="text" id="kategoriUsiaInput"></p>
+    <button onclick="cekKelayakan()">Cek</button>
+
+    <p id="hasilCek"></p>
+
+    <script>
+        function cekKelayakan() {
+            var kategoriUsia = document.getElementById("kategoriUsiaInput").value;
+
+            if (kategoriUsia === "Balita") {
+                document.getElementById("hasilCek").innerHTML = "Balita tidak boleh menonton bioskop.";
+            } else if (kategoriUsia === "Remaja") {
+                document.getElementById("hasilCek").innerHTML = "Remaja boleh menonton bioskop.";
+            } else {
+                document.getElementById("hasilCek").innerHTML = "Kategori usia tidak dikenal.";
+            }
+        }
+    </script>
+</body>
+</html>
